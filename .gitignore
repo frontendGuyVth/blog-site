@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 backend/cred.json
 backend/dist
+backend/.env
+backend/prod-env.yaml
