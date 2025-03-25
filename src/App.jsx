@@ -5,10 +5,13 @@ import {
 import './App.css'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
-import ArticlePage from './pages/ArticlePage'
+import ArticlePage, {loader as articleLoader} from './pages/ArticlePage'
 import ArticlesListPage from './pages/ArticlesListPage'
 import Layout from './Layout'
 import NotFoundPage from './pages/NotFoundPage'
+import LoginPage from './pages/LoginPage'
+import SignupPage from './pages/SignupPage'
+
 
 const routes = [
   {
@@ -30,13 +33,20 @@ const routes = [
       },
       {
         path: '/articles/:name',
-        element: <ArticlePage />
+        element: <ArticlePage />,
+        loader: articleLoader
+      },
+      {
+        path: '/login',
+        element: <LoginPage />
+      },
+      {
+        path: '/signup',
+        element: <SignupPage />
       },
     ]
   }
 ]
-
-
 
 const router = createBrowserRouter(routes);
 
