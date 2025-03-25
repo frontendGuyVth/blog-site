@@ -18,8 +18,9 @@ const app = express();
 app.use(express.json());
 
 let db;
+
 async function connectToDB() {
-  const uri = "mongodb://127.0.0.1:27017";
+  const uri = !process.env.MONGODB_USERNAME ? "mongodb://127.0.0.1:27017" : `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@blog-site-cluster.u1awy.mongodb.net/?retryWrites=true&w=majority&appName=blog-site-cluster`;
   const client = new MongoClient(uri, {
     serverApi: {
       version: ServerApiVersion.v1,
