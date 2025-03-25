@@ -3,3 +3,24 @@
   margin: 0 auto;
   padding: 2rem;
 }
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+}
+.signup h1 {
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+}
+.login h1 {
+  text-align: center;
+}
